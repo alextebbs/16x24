@@ -26,14 +26,12 @@
 
 +all-text-inputs-and-textarea
   border: none
-  background-color: $grey-9
+  background-color: $grey-8
   margin-bottom: $gap
-  box-shadow: inset 0px 0px 0px 0px $purple
-  transition: box-shadow .1s ease-out
   border: 1px solid $grey-7
 
   &:hover
-    background-color: #fff
+    background-color: $grey-9
 
   +placeholder
     color: $grey-5
@@ -41,17 +39,10 @@
   &.full-width
     width: 100%
 
-  &.required
-    box-shadow: inset 6px 0px 0px 0px $dark-red
-
   &:active, &:focus
     background-color: #fff
-    box-shadow: inset 0px 0px 0px 3px $purple
     color: $grey-2
     outline: none
-
-    &.large-input
-      box-shadow: inset 0px 0px 0px 4px $purple
 
     +placeholder
       color: $grey-5
@@ -89,8 +80,8 @@ form
     width: 100%
 
   .large-input
-    padding-left: 24px
-    padding-right: 24px
+    padding-left: 18px
+    padding-right: 18px
     font-size: 28px
     line-height: 36px
     height: 64px
@@ -132,6 +123,12 @@ form
       float: left
       padding-left: $gap / 2
       padding-right: $gap / 2
+
+      &:last-child
+        float: right
+
+      &.third
+        width: 33.33333333%
 
       +all-text-inputs
         width: 100%

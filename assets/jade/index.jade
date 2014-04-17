@@ -3,6 +3,45 @@ html
   include includes/head
 
   body
-    h1 Hello
+    .text-container.style-guide-wrap
+      h1 16x24
+
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+        | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+        | ron paul minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        | aliquip ex ea commodo consequat. Duis ron paul aute irure dolor in
+        | reprehenderit in voluptate velit esse cillum ron paul dolore eu fugiat
+        | nulla pariatur. Excepteur sint occaecat cupidatat ron paul non proident,
+        | sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+      form
+        .form-row.split
+          .split-item
+            input(type='text')
+
+          .split-item
+            input(type='text')
+
+        .form-row.split
+          .split-item.third
+            input(type='text')
+
+          .split-item.third
+            input(type='text')
+
+          .split-item.third
+            input(type='text')
+
+        .form-row
+          textarea.full-width
+
+        .form-row
+          input(type='text').large-input.full-width
+
+        .form-row
+          input(type='submit')
+
+        .form-row
+          input(type='submit').large-button
 
     include includes/footer
