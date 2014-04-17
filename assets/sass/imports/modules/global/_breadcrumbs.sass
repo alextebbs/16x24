@@ -1,0 +1,35 @@
+.breadcrumbs
+  +horizontal-list
+  margin-bottom: 24px
+  border-bottom: 2px solid $grey-8
+
+  li
+    color: $grey-7
+    text-transform: uppercase
+    font-size: 12px
+    line-height: 12px
+
+    &:last-child
+      color: $purple
+
+      a
+        color: $purple
+
+    a
+      color: $grey-6
+      transition: color .2s
+
+      &:hover
+        color: $grey-3
+
+      &:active
+        color: $purple
+
+    &:after
+      content: '/'
+      padding-left: 8px
+      padding-right: 8px
+      font-weight: 900
+
+    &:last-child:after
+      display: none

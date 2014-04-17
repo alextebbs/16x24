@@ -1,0 +1,32 @@
+{
+  "name": "Site",
+  "version": "0.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "matchdep": "~0.1.2",
+    "gulp": "~3.6.0",
+    "gulp-util": "~2.2.14",
+    "gulp-rename": "~1.0.0",
+    "tiny-lr": "0.0.5",
+    "gulp-livereload": "~1.1.1",
+    "gulp-concat": "~2.1.7",
+    "gulp-notify": "~0.4.5",
+    "gulp-uglify": "~0.2.1",
+    "gulp-clean": "~0.2.4",
+    "gulp-autoprefixer": "0.0.6",
+    "gulp-minify-css": "~0.3.0",
+    "gulp-ruby-sass": "~0.3.0",
+    "gulp-cache": "~0.1.1",
+    "gulp-jshint": "~1.4.0",
+    "gulp-imagemin": "~0.1.5",
+    "optipng-bin": "~0.3.1",
+    "jpegtran-bin": "~0.2.3",
+    "gulp-jade": "~0.4.1",
+    "gulp-minify-html": "~0.1.0",
+    "gulp-svgmin": "~0.4.4",
+    "gulp-load-plugins": "~0.4.0"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}

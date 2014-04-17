@@ -1,0 +1,138 @@
+=all-text-inputs
+  input[type='text'],
+  input[type='search'],
+  input[type='password'],
+  input[type='tel'],
+  input[type='url'],
+  input[type='number']
+    @content
+
+=all-text-inputs-and-textarea
+  input[type='text'],
+  input[type='search'],
+  input[type='password'],
+  input[type='tel'],
+  input[type='url'],
+  input[type='number'],
+  textarea
+    @content
+
+.form-row, %form-row
+  @extend %clearfix-no-overflow-hidden
+  margin-bottom: $gap
+
+  +all-text-inputs-and-textarea
+    margin-bottom: 0px
+
++all-text-inputs-and-textarea
+  border: none
+  background-color: $grey-9
+  margin-bottom: $gap
+  box-shadow: inset 0px 0px 0px 0px $purple
+  transition: box-shadow .1s ease-out
+  border: 1px solid $grey-7
+
+  &:hover
+    background-color: #fff
+
+  +placeholder
+    color: $grey-5
+
+  &.full-width
+    width: 100%
+
+  &.required
+    box-shadow: inset 6px 0px 0px 0px $dark-red
+
+  &:active, &:focus
+    background-color: #fff
+    box-shadow: inset 0px 0px 0px 3px $purple
+    color: $grey-2
+    outline: none
+
+    &.large-input
+      box-shadow: inset 0px 0px 0px 4px $purple
+
+    +placeholder
+      color: $grey-5
+
+  &[disabled]
+    background-color: $grey-7
+
+    &:active, &:focus
+      background-color: $grey-7
+      cursor: default
+      box-shadow: none
+
++all-text-inputs
+  height: bl(1.5)
+  padding: 0px bl(.5)
+
+textarea
+  padding: bl(.5)
+  font-size: $fs
+  margin-bottom: $gap
+  min-width: 300px
+  min-height: bl(5)
+
+.button-row
+  margin-left: -($gap / 2)
+  margin-right: -($gap / 2)
+  margin-bottom: $gap
+
+  *
+    margin-left: $gap / 2
+    margin-right: $gap / 2
+
+form
+  .full-width
+    width: 100%
+
+  .large-input
+    padding-left: 24px
+    padding-right: 24px
+    font-size: 28px
+    line-height: 36px
+    height: 64px
+    font-weight: 300
+
+  textarea.large-input
+    height: 240px
+    font-size: 22px
+
+  label
+    color: $grey-5
+    margin-top: bl(.5)
+    display: block
+    font-weight: 400
+    text-transform: uppercase
+    letter-spacing: 1px
+
+    &.large-label
+      font-size: 20px
+
+      +all-text-inputs
+        margin-top: $gap
+
+    +all-text-inputs
+      margin-top: $gap / 2
+
+  .right
+    float: right
+
+  .left
+    float: left
+
+  .form-row.split
+    margin-left: -($gap / 2)
+    margin-right: -($gap / 2)
+
+    .split-item
+      width: 50%
+      float: left
+      padding-left: $gap / 2
+      padding-right: $gap / 2
+
+      +all-text-inputs
+        width: 100%
+        margin-bottom: 0px

@@ -1,0 +1,47 @@
+// Test to see if CSS is working or element is being selected
+=is-css-working
+  &:after, &:before
+    position: fixed !important
+    top: 0px !important
+    left: 0px !important
+    right: 0px !important
+    bottom: 0px !important
+    background-color: #f0f !important
+    content: 'Yes, I think CSS is working.' !important
+    color: #fff !important
+    z-index: 99999999999 !important
+    font-size: 54px !important
+    text-align: center !important
+    padding-top: 15% !important
+    font-weight: bold !important
+
+// Highlight certain
+=debug-highlight($color:rgba(255,0,255,0.3))
+  position: relative !important
+
+  &:after
+    background-color: $color !important
+    top: 0px !important
+    left: 0px !important
+    right: 0px !important
+    bottom: 0px !important
+    position: absolute !important
+    content: '' !important
+    pointer-events: none !important
+
+// Show baseline grid on certain element
+$bl: 24px !default
+=show-baseline-grid($bl:$baseline, $color:black(.3))
+  position: relative !important
+
+  &:before
+    content: '' !important
+    background-repeat: repeat !important
+    background-size: 24px 24px !important
+    +background(linear-gradient(top, transparent 0px, transparent 23px, $color 23px, $color 24px) !important)
+    position: absolute !important
+    top: 0px !important
+    left: 0px !important
+    right: 0px !important
+    bottom: 0px !important
+    pointer-events: none !important

@@ -1,0 +1,16 @@
+// Text sizing and baseline
+$baseline: 24px
+$font-size: 16px
+
+$bl: $baseline
+$lh: $baseline
+$fs: $font-size
+
+// Mixin to setup webfonts, prevents flash of
+// unstyled text when loading from webfont services
+=font
+  font-family: 'Source Sans Pro', sans-serif
+  visibility: hidden
+
+  .wf-active &
+    visibility: visible

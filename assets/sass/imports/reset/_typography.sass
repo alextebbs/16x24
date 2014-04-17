@@ -1,0 +1,90 @@
+// 16x24 baby
+body
+  line-height: $bl
+  font-size: $fs
+  font-family: 'Roboto'
+  font-weight: 300
+  -webkit-font-smoothing: antialiased
+
+// Reset margin and padding of everybody
++all-text-elements
+  margin: 0px
+  padding: 0px
+  line-height: $bl
+  font-size: $fs
+  font-weight: 400
+
+// No list styling unless in the right container
+ol, ul, dl
+  list-style: none
+
+code
+  font-size: 14px
+
+$default-text-margin: bl(1)
+
+.reversed
+  background-color: $grey-2
+
+.text-container
+  +all-text-elements
+    color: $grey-2
+
+  &.reversed, .reversed, .reversed &
+    +all-text-elements
+      color: $grey-8
+
+  +body-text-elements
+    margin-bottom: $default-text-margin
+    font-weight: 400
+
+    &:last-child
+      margin-bottom: 0px
+
+  h1
+    line-height: bl(2)
+    font-weight: 100
+    font-size: 38px
+
+  h2
+    line-height: bl(1.5)
+    font-weight: 300
+    font-size: 28px
+
+  h3, h4, h5
+    font-weight: 100
+    text-transform: uppercase
+    letter-spacing: 1px
+    line-height: $bl
+
+  a:hover
+    color: $orange
+
+  h3
+    font-size: 22px
+
+  h4
+    font-size: 16px
+
+  h1, h2, h3
+    margin-bottom: bl(.5)
+
+  h4, h5, h6
+    margin-bottom: 0px
+
+  ol, ul
+    padding-left: $bl
+
+  ol
+    list-style: decimal
+
+  ul
+    list-style: disc
+
+  blockquote
+    padding-left: $bl
+    border-left: 1px solid #ddd
+
+    +body-text-elements
+      &:last-child
+        margin-bottom: 0px
