@@ -17,6 +17,11 @@ installed globally. If that isn't the case, follow the below steps.
 
 * Install NPM ([Guide](http://howtonode.org/introduction-to-npm) or `curl http://npmjs.org/install.sh | sh`
 * Install Bower (`npm install -g bower`)
+    * Bower is a package manager for front-end tools and scripts such as
+      jQuery or your favorite carousel plugin. All bower packages will be
+      installed into `assets/components`. If you'd prefer to manage your
+      front-end dependencies the old fashioned way, go right ahead and ignore
+      Bower.
 * Install RubyGems ([Download](http://rubygems.org/pages/download))
 * Install Sass (`sudo gem install sass`)
 * Install `sass-globbing` (`sudo gem install sass-globbing`)
@@ -41,7 +46,7 @@ future projects.
 * Install project-level dependencies (`npm install && bower install`)
     * This will create the `node_modules` directory (NPM) and the
       `assets/components` directory (Bower). It should be noted that these
-      directories should be ignored via version control. Review `package.json`
+      directories are ignored via version control. Review `package.json`
       and `bower.json` for a listing of the packages that will be installed.
 * Run Gulp (`gulp`)
 * Watch changes and start LiveReload (`gulp watch`)
