@@ -11,11 +11,11 @@ installed globally. If that isn't the case, follow the below steps.
 * Install RubyGems ([Download](http://rubygems.org/pages/download))
 * Install Sass (globally) (`sudo gem install sass`)
 * Install `sass-globbing` (globally) (`sudo gem install sass-globbing`)
-  This is a package which simplifies the importing of multiple sass files by letting
+  This is a package which simplifies the importing of multiple .sass/.scss files by letting
   you import using a glob syntax. This greatly enhances the experience of
-  writing modular and organized SASS/CSS. (Ex `@import sass/**/*`)
+  writing modular and organized SASS/CSS. (Ex: `@import sass/**/*`)
 * Install Gulp (globally) (`npm install gulp -g`)
-* If you'd like LiveReload to work, install the browser extension. ((Download)[http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions]).
+* If you'd like LiveReload to work, install the browser extension. ([Download](http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions)).
   LiveReload is enabled by clicking the icon in the toolbar of your browser. If
   it's listening, the circle in the middle of the icon will be filled black.
 
