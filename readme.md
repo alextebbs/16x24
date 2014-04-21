@@ -1,4 +1,4 @@
-# Getting Started
+# 16x24
 
 * Clone this repository and go into the directory `cd folder_name`
 * Install dependencies - `npm install && bower install`

@@ -2,15 +2,47 @@
 $baseline: 24px
 $font-size: 16px
 
+$base-font-stack: 'Roboto', sans-serif
+$alt-font-stack: 'Georgia', sans-serif
+
+// Shorthands and a helper function
 $bl: $baseline
 $lh: $baseline
 $fs: $font-size
 
-// Mixin to setup webfonts, prevents flash of
-// unstyled text when loading from webfont services
-=font
-  font-family: 'Source Sans Pro', sans-serif
-  visibility: hidden
+@function bl($ratio)
+  @return $bl * $ratio
 
-  .wf-active &
-    visibility: visible
+// Define Heading styles
+%heading-1
+  font-size: 40px
+  line-height: $bl * 2
+
+%heading-2
+  font-size: 32px
+  line-height: $bl * 2
+
+%heading-3
+  font-size: 28px
+  line-height: $bl * 1.5
+
+%heading-4
+  font-size: 20px
+  line-height: $bl
+
+%heading-5
+  font-size: 16px
+  line-height: $bl
+
+%heading-6
+  font-size: 14px
+  line-height: $bl
+
+%global-heading
+  font-weight: 100
+  margin-bottom: 12px
+
+%heading-1,
+%heading-2,
+%heading-3
+  @extend %global-heading

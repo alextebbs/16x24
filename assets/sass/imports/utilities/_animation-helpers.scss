@@ -5,14 +5,14 @@ $_anim-increment: 0;
 
 @mixin animation($selector, $props) {
   $name: #{'anim-'+$_anim-increment};
-  
+
   // Define animation
   @at-root {
     @keyframes #{$name} {
       @content;
     }
   }
-  
+
   // Link animation to selector
   #{$selector} {
     animation: $name $props;

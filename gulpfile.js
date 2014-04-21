@@ -53,9 +53,6 @@ gulp.task('templates', function() {
 gulp.task('scripts', function() {
   return gulp.src([
       'assets/components/jquery/dist/jquery.js',
-      'assets/components/skrollr-stylesheets/dist/skrollr.stylesheets.min.js',
-      'assets/components/skrollr/dist/skrollr.min.js',
-      'assets/js/numberData.js',
       'assets/js/scripts.js'
     ])
     // .pipe(jshint('.jshintrc'))
@@ -72,7 +69,7 @@ gulp.task('scripts', function() {
 // Images
 gulp.task('images', function() {
   return gulp.src(['assets/img/**/*.{png,jpg,gif}'])
-    // .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
+    .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
     .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
     .pipe(livereload(server))
     .pipe(gulp.dest(devFolder+'/assets/img'))
