@@ -24,7 +24,8 @@ new project.
 
 ## Setup
 
-* Clone this repository `git clone http://github.com/alextebbs/16x24`
+* Clone this repository `git clone https://github.com/alextebbs/16x24`
+    * Using SVN? `svn checkout https://github.com/alextebbs/16x24.git`
 * Rename project folder `mv 16x24 your_project_name`
 * Change into project directory `cd your_project_name`
 * Install project-level dependencies - `npm install && bower install`
