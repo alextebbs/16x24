@@ -1,9 +1,13 @@
 # 16x24
 
 This is a front end setup built on the Gulp task runner. This setup can compile
-SASS, minify, lint, and concatenate JS, optimize images, compile templates
-using Jade, refresh your browser automatically, and more.  It's pretty cool.
+Sass, minify, lint, and concatenate JS, optimize images and svg files, compile HTML
+templates using Jade, refresh your browser automatically, and more. It's pretty cool.
 Trust me on this one.
+
+This repo contains a full configuration with all the features listed above. You'll
+probably want to examine `gulpfile.js` and adjust it according to your projects
+requirements.
 
 ## Pre-setup
 
@@ -29,14 +33,14 @@ new project.
 
 ## Setup
 
-* Clone this repository `git clone https://github.com/alextebbs/16x24.git`
+* Clone this repository (`git clone https://github.com/alextebbs/16x24.git`)
     * Using SVN? `svn checkout https://github.com/alextebbs/16x24.git`
-* Rename project folder `mv 16x24 your_project_name`
-* Change into project directory `cd your_project_name`
-* Install project-level dependencies - `npm install && bower install`
-* Run Gulp - `gulp`
-* Watch changes and start LiveReload - `gulp watch`
-* Run a specific Gulp task `gulp styles` or `gulp scripts`
+* Rename project folder (`mv 16x24 your_project_name`)
+* Change into project directory (`cd your_project_name`)
+* Install project-level dependencies (`npm install && bower install`)
+* Run Gulp (`gulp`)
+* Watch changes and start LiveReload (`gulp watch`)
+* Run a specific Gulp task (`gulp styles` or `gulp scripts`)
 
 ## Documentation for packages used
 
