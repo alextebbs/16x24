@@ -1,5 +1,9 @@
 # 16x24
 
+This is a front end setup built on the Gulp task runner. This setup can compile
+SASS, minify, lint, and concatenate JS, optimize images, refresh your browser
+automatically, and more. It's pretty cool. Trust me on this one.
+
 ## Pre-setup
 
 This guide assumes you have the `npm`, `gem`, and `bower` package managers, the
@@ -24,7 +28,7 @@ new project.
 
 ## Setup
 
-* Clone this repository `git clone https://github.com/alextebbs/16x24`
+* Clone this repository `git clone https://github.com/alextebbs/16x24.git`
     * Using SVN? `svn checkout https://github.com/alextebbs/16x24.git`
 * Rename project folder `mv 16x24 your_project_name`
 * Change into project directory `cd your_project_name`
