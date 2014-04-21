@@ -6,8 +6,8 @@ templates using Jade, refresh your browser automatically, and more. It's pretty 
 Trust me on this one.
 
 This repo contains a full configuration with all the features listed above. You'll
-probably want to examine `gulpfile.js` and adjust it according to your projects
-requirements.
+probably want to examine `gulpfile.js` and adjust it according to your
+project requirements and directory structure.
 
 ## Pre-setup
 
