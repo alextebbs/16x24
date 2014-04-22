@@ -106,7 +106,7 @@ gulp.task('default', ['clean'], function() {
 // Watch
 gulp.task('watch', ['default'], function() {
 
-  // Listen on port 35729
+  // Listen on port 35729 (LiveReload)
   server.listen(35729, function (err) {
     if (err) {
       return console.log(err)
