@@ -14,7 +14,7 @@ This setup assumes you have the `npm`, `gem`, and `bower` package managers, the
 `sass` and `sass-globbing` gems installed globally, and the `gulp` package from NPM
 installed globally. If that isn't the case, follow the below steps.
 
-* Install NPM ([Guide](http://howtonode.org/introduction-to-npm) or `curl http://npmjs.org/install.sh | sh`
+* Install NPM ([Guide](http://howtonode.org/introduction-to-npm) or `curl -L http://npmjs.org/install.sh | sh`
 * Install Bower (`npm install -g bower`)
     * Bower is a package manager for front-end tools and scripts such as
       jQuery or your favorite carousel plugin. All bower packages will be

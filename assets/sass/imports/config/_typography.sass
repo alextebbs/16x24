@@ -3,7 +3,7 @@ $baseline: 24px
 $font-size: 16px
 
 $base-font-stack: 'Roboto', sans-serif
-$alt-font-stack: 'Georgia', sans-serif
+$alt-font-stack: 'Georgia', serif
 
 // Shorthands and a helper function
 $bl: $baseline
@@ -40,9 +40,7 @@ $fs: $font-size
 
 %global-heading
   font-weight: 100
-  margin-bottom: 12px
+  margin-bottom: 24px
 
-%heading-1,
-%heading-2,
-%heading-3
+%heading-1, %heading-2, %heading-3, %heading-4, %heading-5, %heading-6
   @extend %global-heading

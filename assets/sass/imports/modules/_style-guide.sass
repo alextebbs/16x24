@@ -1,3 +1,17 @@
+body
+  font-weight: 300
+
+  #{$all-text-elements}
+    font-weight: 300
+
 .style-guide-wrap
   padding: 24px
   max-width: 700px
+  // +show-baseline-grid
+
+.vertical-center-test
+  background-color: $grey-8
+  margin-bottom: 24px
+  +table-cell-center($bl * 4)
+  text-align: center
+  padding: 0px 12px

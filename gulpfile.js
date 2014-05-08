@@ -53,6 +53,7 @@ gulp.task('templates', function() {
 gulp.task('scripts', function() {
   return gulp.src([
       'assets/components/jquery/dist/jquery.js',
+      'assets/components/flexslider/jquery.flexslider.js',
       'assets/js/scripts.js'
     ])
     // .pipe(jshint('.jshintrc'))
@@ -133,8 +134,6 @@ gulp.task('watch', ['default'], function() {
     });
 
     // Watch .jade files
-    gulp.watch(['assets/jade/**/*.jade'], function(event) {
-      gulp.run('templates');
-    });
+    gulp.watch(['assets/jade/**/*.jade'], 'templates');
   });
 });

@@ -1,5 +1,6 @@
 // Mixin to create horizontal lists, either with
 // inline-block or float
+
 =horizontal-list($type:inline-block)
   @extend %reset-list
 
@@ -13,7 +14,7 @@
       font-size: $font-size
 
   @if $type == float
-    @extend %clearfix
+    +clearfix
 
     & > li
       float: left

@@ -1,61 +1,15 @@
-=position($type, $offsets)
-  $positionProperty: top, right, bottom, left
+=position-fill
+  position: absolute
+  top: 0px
+  left: 0px
+  right: 0px
+  bottom: 0px
 
-  @if $type == 'sta' or $type == 's' or $type == 'static'
-    position: static
-
-  @else if $type == 'rel' or $type == 'r' or $type == 'relative'
-    position: relative
-
-  @else if $type == 'abs' or $type == 'a' or $type == 'absolute'
-    position: absolute
-
-  @else if $type == 'fix' or $type == 'f' or $type == 'fixed'
-    position: fixed
-
-  @if length($offsets) == 1
-    @if $offsets != none
-      @each $property in $positionProperty
-        #{$property}: $offsets
-
-  @else if length($offsets) == 2
-    @if nth($offsets, 1) != none
-      top: nth($offsets, 1)
-      bottom: nth($offsets, 1)
-
-    @if nth($offsets, 2) != none
-      right: nth($offsets, 2)
-      left: nth($offsets, 2)
-
-  @else if length($offsets) == 3
-    @if nth($offsets, 1) != none
-      top: nth($offsets, 1)
-
-    @if nth($offsets, 2) != none
-      right: nth($offsets, 2)
-      left: nth($offsets, 2)
-
-    @if nth($offsets, 3) != none
-      bottom: nth($offsets, 3)
-
-  @else if length($offsets) == 4
-    @if nth($offsets, 1) != none
-      top: nth($offsets, 1)
-
-    @if nth($offsets, 2) != none
-      right: nth($offsets, 2)
-
-    @if nth($offsets, 3) != none
-      bottom: nth($offsets, 3)
-
-    @if nth($offsets, 4) != none
-      left: nth($offsets, 4)
-
-=absolute($offsets)
-  +position(absolute, $offsets)
-
-=fixed($offsets)
-  +position(fixed, $offsets)
-
-=relative($offsets)
-  +position(relative, $offsets)
+=position-center($width, $height, $position: absolute)
+  width: $width
+  height: $height
+  margin-left: -($width / 2)
+  margin-top: -($height / 2)
+  position: $position
+  top: 50%
+  left: 50%

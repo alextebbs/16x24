@@ -15,33 +15,14 @@
     padding-top: 15% !important
     font-weight: bold !important
 
-// Highlight certain
+// Highlight an element
 =debug-highlight($color:rgba(255,0,255,0.3))
-  position: relative !important
-
-  &:after
+  +overlay
     background-color: $color !important
-    top: 0px !important
-    left: 0px !important
-    right: 0px !important
-    bottom: 0px !important
-    position: absolute !important
-    content: '' !important
-    pointer-events: none !important
 
 // Show baseline grid on certain element
-$bl: 24px !default
-=show-baseline-grid($bl:$baseline, $color:black(.3))
-  position: relative !important
-
-  &:before
-    content: '' !important
-    background-repeat: repeat !important
-    background-size: 24px 24px !important
-    +background(linear-gradient(top, transparent 0px, transparent 23px, $color 23px, $color 24px) !important)
-    position: absolute !important
-    top: 0px !important
-    left: 0px !important
-    right: 0px !important
-    bottom: 0px !important
-    pointer-events: none !important
+=show-baseline-grid($bl:$baseline, $color:black(0.1))
+  +overlay
+    background: linear-gradient(to bottom, transparent 0px, transparent $bl - 1px, $color $bl - 1px, $color $bl)
+    background-size: $bl $bl
+    background-repeat: repeat
