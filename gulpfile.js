@@ -1,5 +1,5 @@
 var devFolder = '_dev';
-var assetsFolder = 'assets';
+var assetsFolder = 'src';
 
 // Load plugins
 var gulp = require('gulp'),

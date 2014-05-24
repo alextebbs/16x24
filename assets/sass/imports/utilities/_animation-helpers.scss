@@ -3,7 +3,7 @@
 
 $_anim-increment: 0;
 
-@mixin animation($selector, $props) {
+@mixin animation($selector) {
   $name: #{'anim-'+$_anim-increment};
 
   // Define animation
@@ -14,9 +14,7 @@ $_anim-increment: 0;
   }
 
   // Link animation to selector
-  #{$selector} {
-    animation: $name $props;
-  }
+  animation-name: $name;
 
   // Increment animation number
   $_anim-increment: $_anim-increment + 1;
