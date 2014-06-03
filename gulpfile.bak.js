@@ -1,13 +1,11 @@
 var devFolder = '_dev';
-var srcFolder = 'src';
+var srcFolder = 'thing';
 
 var srcGlobs = {
   'img':          ['assets/img/**/*.{png,jpg,gif}'],
   'style':        ['sass/*.{sass,scss}'],
-  'styleAll':     ['sass/**/*.{sass,scss}'],
   'svg':          ['img/**/*.svg'],
   'templates':    ['jade/*.jade'],
-  'templatesAll': ['jade/**/*.jade'],
   'fonts':        ['fonts/**/*'],
   'js':           ['components/jquery/dist/jquery.js',
                    'components/flexslider/jquery.flexslider.js',
@@ -122,17 +120,19 @@ gulp.task('default', ['clean'], function() {
 // Watch
 gulp.task('watch', ['default'], function() {
 
+  console.log(srcGlobs.style);
+
   // Listen on port 35729 (LiveReload)
   server.listen(35729, function (err) {
     if (err) {
       return console.log(err)
     };
 
-    gulp.watch(srcGlobs.styleAll, ['styles']);         // Watch .sass files
-    gulp.watch(srcGlobs.js, ['scripts']);              // Watch .js files
-    gulp.watch(srcGlobs.img, ['images']);              // Watch image files
-    gulp.watch(srcGlobs.svg, ['svg']);                 // Watch .svg files
-    gulp.watch(srcGlobs.fonts, ['fonts']);             // Watch font files
-    gulp.watch(srcGlobs.templatesAll, ['templates']);     // Watch .jade files
+    gulp.watch(srcGlobs.style, 'styles');               // Watch .sass files
+    // gulp.watch(srcGlobs.js, 'scripts');              // Watch .js files
+    // gulp.watch(srcGlobs.img, 'images');              // Watch image files
+    // gulp.watch(srcGlobs.svg, 'svg');                 // Watch .svg files
+    // gulp.watch(srcGlobs.fonts, 'fonts');             // Watch font files
+    // gulp.watch(srcGlobs.templates, 'templates');     // Watch .jade files
   });
 });
