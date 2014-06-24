@@ -2,7 +2,7 @@ var devFolder = '_dev';
 var srcFolder = 'src';
 
 var srcGlobs = {
-  'img':          ['assets/img/**/*.{png,jpg,gif}'],
+  'img':          ['img/**/*.{png,jpg,gif}'],
   'style':        ['sass/*.{sass,scss}'],
   'styleAll':     ['sass/**/*.{sass,scss}'],
   'svg':          ['img/**/*.svg'],
