@@ -1,0 +1,89 @@
+@mixin container($width: $container-width, $gutter: $grid-padding) {
+  max-width: $width;
+  margin: 0px auto;
+  padding: 0px $gutter;
+  @include clearfix;
+}
+
+@mixin make-columns($gutter: 18px, $column-selector: ".column") {
+  margin-left: -($gutter / 2);
+  margin-right: -($gutter / 2);
+  @include clearfix;
+
+  @at-root {
+    #{$column-selector} {
+      padding-left: $gutter;
+      padding-right: $gutter;
+      float: left;
+
+      &.golden-major { width: 100% / $aspect-golden; }
+      &.golden-minor { width: 100% - 100% / $aspect-golden; }
+      &.one-half { width: 50%; }
+      &.push-one-half { margin-left: 50%; }
+      &.one-third { width: 33.333%; }
+      &.push-one-third { margin-left: 33.333%; }
+      &.two-thirds { width: 66.666%; }
+      &.push-two-thirds { margin-left: 66.666%; }
+      &.one-fourth { width: 25%; }
+      &.push-one-fourth { margin-left: 25%; }
+      &.three-fourths { width: 75%; }
+      &.push-three-fourths { margin-left: 75%; }
+      &.one-fifth { width: 20%; }
+      &.push-one-fifth { margin-left: 20%; }
+      &.pull-one-fifth { margin-left: -20%; }
+      &.two-fifths { width: 40%; }
+      &.push-two-fifths { margin-left: 40%; }
+      &.three-fifths { width: 60%; }
+      &.push-three-fifths { margin-left: 60%; }
+      &.four-fifths { width: 80%; }
+      &.push-four-fifths { margin-left: 80%; }
+      &.one-sixth { width: 16.66667%; }
+      &.five-sixths { width: 100% - 16.66667%; }
+      &.push-five-sixths { margin-left: 100% - 16.66667%; }
+      &.push-one-sixth { margin-left: 16.66667%; }
+    }
+  }
+}
+
+.column-row {
+  @include make-columns($gutter: 0px);
+}
+
+$fractions: (
+  half: 50%,
+  third: 33.333333%,
+  fourth: 25%,
+  fifth: 20%,
+  sixth: 16.666667%,
+  seventh: 14.285714286%,
+  eighth: 12.5%,
+  ninth: 11.111111111%,
+  tenth: 10%,
+  eleventh: 9.090909091%,
+  twelfth: 8.333333333%
+);
+
+$numbers: one two three four five six seven eight nine ten eleven;
+
+@each $fraction, $width in $fractions {
+
+  $index: index($fractions, $fraction $width);
+
+  @while $index > 0 {
+    $plural: $fraction + 's';
+
+    @if $index == 1 {
+      $plural: $fraction;
+    }
+
+    $base-selector: nth($numbers, $index) + '-' + $plural;
+
+    .column-#{$base-selector} { width: ($width * $index); }
+    .push-#{$base-selector} { margin-left: ($width * $index); }
+    .pull-#{$base-selector} { margin-right: ($width * $index); }
+
+    $index: $index - 1;
+  }
+
+}
+
