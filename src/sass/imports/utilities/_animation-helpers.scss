@@ -1,9 +1,9 @@
-// Would you rather just define animations inline 
+// Would you rather just define animations inline
 // and not bother with naming them?
 
 $_anim-increment: 0;
 
-@mixin animation($selector) {
+@mixin animation {
   $name: #{'anim-'+$_anim-increment};
 
   // Define animation
