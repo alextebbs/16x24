@@ -1,18 +1,37 @@
 body
   font-weight: 300
+  background-color: $grey-9
 
   #{$all-text-elements}
     font-weight: 300
 
+.sidebar
+  position: fixed
+  left: 0px
+  top: 0px
+  bottom: 0px
+  width: 160px
+  border-right: 1px solid $grey-8
+
 .style-guide-wrap
-  padding: 24px
   max-width: 700px
+  margin-left: 160px
+  border-right: 1px solid $grey-8
+  background-color: #fff
   // +show-baseline-grid
 
 .styleguide-section
-  padding-bottom: bl(2)
-  margin-bottom: bl(2)
-  border-bottom: 1px solid $grey-7
+  padding: 24px
+  padding-bottom: bl(4)
+  border-bottom: 1px solid $grey-8
+  padding-top: 0px
+
+  & > h2
+    margin-left: -24px
+    margin-right: -24px
+    font-size: 18px
+    padding: 12px 24px
+    background-color: $grey-9
 
 .vertical-center-test
   background-color: $grey-8
