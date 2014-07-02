@@ -85,7 +85,8 @@ gulp.task('scripts', function() {
 // Images
 gulp.task('images', function() {
   return gulp.src(srcGlobs.img)
-    .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
+    // Commented out caching
+    // .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
     .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
     .pipe(livereload(server))
     .pipe(gulp.dest(devFolder+'/assets/img'))
