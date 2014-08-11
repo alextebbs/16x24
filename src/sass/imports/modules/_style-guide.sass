@@ -6,39 +6,59 @@ body
     font-weight: 300
 
 .sidebar
-  position: fixed
-  left: 0px
-  top: 0px
-  bottom: 0px
-  width: 160px
   border-right: 1px solid $grey-8
+  +sidebar($width: 160px)
+
+  h1
+    padding: 12px
+    border-bottom: 1px solid $grey-8
+    margin-bottom: 12px
+
+  .sidebar-nav
+    padding: 12px
+    padding-left: 0px
+
+    & > ul > li
+      border-bottom: 1px solid $grey-8
+      margin-bottom: 12px
+      padding-bottom: 12px
+
+    ul
+      padding-left: 12px
+
+    a
+      font-size: 14px
+      color: $grey-4
+
+      &:hover
+        color: $blue
 
 .style-guide-wrap
-  max-width: 700px
   margin-left: 160px
   border-right: 1px solid $grey-8
-  background-color: #fff
-  // +show-baseline-grid
 
 .styleguide-section
-  padding: 24px
-  padding-bottom: bl(4)
-  border-bottom: 1px solid $grey-8
   padding-top: 0px
+  max-width: 700px
+  border-bottom: 1px solid $grey-8
 
-  & > h2
-    margin-left: -24px
-    margin-right: -24px
-    font-size: 18px
-    padding: 12px 24px
-    background-color: $grey-9
+.styleguide-text
+  background-color: #fff
+  padding: 24px
+
+.styleguide-test
+  padding: 24px
+  background-color: #fff
+
+// Parts
 
 .vertical-center-test
   background-color: $grey-8
-  margin-bottom: 24px
   +table-cell-center($bl * 4)
   text-align: center
   padding: 0px 12px
+
+// ----------------------------------------------------------------------------
 
 .fade-out
   height: $bl * 5
@@ -47,11 +67,12 @@ body
   +fade-out($bl, $grey-8)
   margin-bottom: $bl
 
+// ----------------------------------------------------------------------------
+
 .grey-box
   background-color: $grey-8
 
-.photo-grid-layout .column-row
-  +make-columns(0px)
+// ----------------------------------------------------------------------------
 
 .overflow-test
   .inner
@@ -61,6 +82,8 @@ body
   p
     +overflow-ellipsis
     margin-bottom: 0px
+
+// ----------------------------------------------------------------------------
 
 .text-separator-test
   +horizontal-list
@@ -73,6 +96,8 @@ body
     li
       +text-separator($char: 'x', $pad: 6px)
 
+// ----------------------------------------------------------------------------
+
 .colors-list
   list-style: none !important
   +clearfix
@@ -84,6 +109,10 @@ body
     background-color: #f0f
 
   &.greys
+    padding: 12px
+    background-color: #f0f
+    background: linear-gradient(to right, $grey-9, $grey-0)
+
     li:nth-child(1)
       background-color: $grey-0
 
@@ -160,3 +189,5 @@ body
 
     li:nth-child(14)
       background-color: $dark-teal
+
+// ----------------------------------------------------------------------------

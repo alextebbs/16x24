@@ -14,8 +14,8 @@
 
   @at-root {
     #{$column-selector} {
-      padding-left: $gutter;
-      padding-right: $gutter;
+      padding-left: $gutter / 2;
+      padding-right: $gutter / 2;
       float: left;
     }
   }

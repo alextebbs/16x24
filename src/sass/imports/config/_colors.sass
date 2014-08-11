@@ -26,16 +26,51 @@ $dark-grey: #95a5a6 !default
 $darker-grey: #7f8c8d !default
 $darkest-grey: darken($darker-grey, 45%)
 
-$grey-9: lighten(#ecf0f1, 5%)
-$grey-8: #ecf0f1 !default
-$grey-7: darken(#ecf0f1, 5%)
-$grey-6: #bdc3c7 !default
-$grey-5: desaturate($dark-grey, 2%)
-$grey-4: desaturate(darken($dark-grey, 12.5%), 3%)
+$grey-9: desaturate(lighten(#ecf0f1, 2.5%), 5%)
+$grey-8: saturate(#ecf0f1, 10%) !default
+$grey-7: darken(#ecf0f1, 7.5%)
+$grey-6: darken(saturate(#bdc3c7, 1%), 2%) !default
+$grey-5: darken(desaturate($dark-grey, 4%), 2%)
+$grey-4: adjust-hue(desaturate(darken($dark-grey, 12.5%), 6%), 200%)
 $grey-3: darken(desaturate($darker-grey, 0%), 12.5%)
 $grey-2: darken($darker-grey, 22.5%)
-$grey-1: darken($darker-grey, 35%)
-$grey-0: darken($darker-grey, 45%)
+$grey-1: darken($darker-grey, 30%)
+$grey-0: darken($darker-grey, 40%)
+
+$cool-grey-hue: 200
+
+$grey-9: hsl($cool-grey-hue, 10, 95)
+$grey-8: hsl($cool-grey-hue, 15, 90)
+$grey-7: hsl($cool-grey-hue, 10, 70)
+$grey-6: hsl($cool-grey-hue, 10, 60)
+$grey-5: hsl($cool-grey-hue, 7.5, 50)
+$grey-4: hsl($cool-grey-hue, 10, 40)
+$grey-3: hsl($cool-grey-hue, 10, 35)
+$grey-2: hsl($cool-grey-hue, 10, 30)
+$grey-1: hsl($cool-grey-hue, 10, 22.5)
+$grey-0: hsl($cool-grey-hue, 10, 15)
+
+// $grey-9: desaturate(desaturate(lighten(#ecf0f1, 2.5%), 5%), 100%)
+// $grey-8: desaturate(saturate(#ecf0f1, 10%), 100%)
+// $grey-7: desaturate(darken(#ecf0f1, 7.5%), 100%)
+// $grey-6: desaturate(darken(saturate(#bdc3c7, 1%), 2%), 100%)
+// $grey-5: desaturate(darken(desaturate($dark-grey, 4%), 2%), 100%)
+// $grey-4: desaturate(desaturate(darken($dark-grey, 12.5%), 6%), 100%)
+// $grey-3: desaturate(darken(desaturate($darker-grey, 0%), 12.5%), 100%)
+// $grey-2: desaturate(darken($darker-grey, 22.5%), 100%)
+// $grey-1: desaturate(darken($darker-grey, 30%), 100%)
+// $grey-0: desaturate(darken($darker-grey, 40%), 100%)
+
+// $grey-9: #FBFCFC
+// $grey-8: #ECF0F1
+// $grey-7: #DDE4E6
+// $grey-6: #BDC3C7
+// $grey-5: #97A3A4
+// $grey-4: #768485
+// $grey-3: #606B6C
+// $grey-2: #485051
+// $grey-1: #2A2F2F
+// $grey-0: #121414
 
 $black: #000 !default
 $white: #fff !default
