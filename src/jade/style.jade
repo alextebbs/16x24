@@ -1,0 +1,255 @@
+doctype
+html
+  include includes/head
+
+  body
+    include includes/sidebar
+    .text-container.style-guide-wrap
+      .styleguide-section
+        .styleguide-text
+          p 16x24 is a CSS framework. Don't worry.
+
+      .styleguide-section
+        .styleguide-text
+          h2 Vertical Center with table
+
+          p Vertically center items inside of a set-height container.
+
+        .styleguide-test
+          .column-row
+            .column.one-fourth
+              .vertical-center-test
+                .inner This is content
+
+            .column.one-fourth
+              .vertical-center-test
+                .inner This is content going all the way to three lines
+
+            .column.one-fourth
+              .vertical-center-test
+                .inner This is content
+
+            .column.one-fourth
+              .vertical-center-test
+                .inner This is content for a third time
+
+      .styleguide-section
+        .styleguide-text
+          h2 Overflow Ellipsis
+
+          p Cut off text using an ellipsis when it's too long to fit on a single line.
+
+        .styleguide-test
+          .column-row.overflow-test
+            .column.one-fourth
+              .inner
+                p Stuff Here.
+
+            .column.one-fourth
+              .inner
+                p Longer Stuff Here.
+
+            .column.one-fourth
+              .inner
+                p I'm just too long, cut me off.
+
+            .column.one-fourth
+              .inner
+                p I'm getting cut off here.
+
+      .styleguide-section
+        .styleguide-text
+          h2 Grid
+
+          p I am not a fan of grid frameworks, so 16&times;14 only includes a
+            | fairly primitive grid system (compared to what is available on the
+            | web today). I don't think it's possible to create a grid system
+            | which satisfies every requirement and pleases everyone, so this is
+            | what I use, and I am comfortable using it. It is a percentage based grid with
+            | 12 possible columns.
+
+        .styleguide-test.grid-test
+          .column-row
+            .column.one-fourth
+              .inner
+                p .column.one-fourth
+
+            .column.one-half
+              .inner
+                p .column.one-half
+
+            .column.one-fourth
+              .inner
+                p .column.one-fourth
+
+          .column-row
+            .column.two-fifths
+              .inner
+                p .column.two-fifths
+
+            .column.three-fifths
+              .inner
+                p .column.three-fifths
+
+          .column-row
+            .column.three-fifths.push-one-fifth
+              .inner
+                p .column.three-fifths.push-one-fifth
+
+            .column.one-fifth
+              .inner
+                p .column.one-fifth
+
+      .styleguide-section
+        .styleguide-text
+          h2 Text Separator
+
+          p Create separators between text using psuedoelemnents. Configurable
+            | character and padding.
+
+        .styleguide-test
+          ul.text-separator-test.test-1
+            li Separated
+            li Separated
+            li Separated
+            li Separated
+            li Separated
+
+          ul.text-separator-test.test-2
+            li Separated
+            li Separated
+            li Separated
+            li Separated
+            li Separated
+
+      .styleguide-section
+        .styleguide-text
+          h2 Swatches
+
+          p Here are some colors that come with 16&times;24.
+
+          h3 Colors
+
+          ul.colors-list.colors
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+
+          h3 Greys
+
+          p Trust me, you're going to want grey. 16&times;24 includes 3 palettes of
+            | grey colors, a cool palette, a warm palette, and a neutral palette.
+            | They are configurable in <code>colors.sass</code>.
+
+          ul.colors-list.cool-greys
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+
+          ul.colors-list.neutral-greys
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+
+          ul.colors-list.warm-greys
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+
+      .styleguide-section
+        .styleguide-text
+          h2 Text Fade Out
+
+          p Fade out content once a div reaches a certain height.
+
+        .styleguide-test
+          .fade-out
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+              | ron paul minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              | aliquip ex ea commodo consequat. Duis ron paul aute irure dolor in
+              | reprehenderit in voluptate velit esse cillum ron paul dolore eu fugiat
+              | nulla pariatur. Excepteur sint occaecat cupidatat ron paul non proident,
+              | sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+      .styleguide-section
+        .styleguide-text
+          h2 Aspect Ratio
+
+          p Combining columns and aspect ratio boxes can create complex scaling ratio-based layouts.
+
+      .styleguide-section
+        .styleguide-text
+          h2 Basic Forms
+
+          form
+            .form-row.split
+              .split-item
+                label
+                  .form-label Hello
+                  input(type='text')
+
+              .split-item
+                label 
+                  .form-label I'm a label
+                  input(type='text')
+
+            .form-row.split
+              .split-item.third
+                label
+                  .form-label I'm a label
+                  input(type='text')
+
+              .split-item.third
+                label
+                  .form-label I'm a label
+                  input(type='text')
+
+              .split-item.third
+                label
+                  .form-label I'm a label
+                  input(type='text')
+
+            .form-row
+              textarea.full-width
+
+            .form-row
+              input(type='text').large-input.full-width
+
+            .form-row
+              input(type='submit')
+
+            .form-row
+              input(type='submit').large-button

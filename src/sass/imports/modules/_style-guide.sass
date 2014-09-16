@@ -98,6 +98,21 @@ body
 
 // ----------------------------------------------------------------------------
 
+.grid-test
+  .inner
+    background-color: $grey-8
+    padding: $gutter-width
+
+  .column-row
+    margin-bottom: $gutter-width
+
+  p
+    margin-bottom: 0px
+    font-size: 12px
+    text-align: center
+
+// ----------------------------------------------------------------------------
+
 .colors-list
   list-style: none !important
   +clearfix
@@ -106,42 +121,108 @@ body
     width: 10%
     padding-top: 10%
     float: left
-    background-color: #f0f
 
-  &.greys
+  &.cool-greys
     padding: 12px
-    background-color: #f0f
-    background: linear-gradient(to right, $grey-9, $grey-0)
+    background: linear-gradient(to right, $cool-grey-9, $cool-grey-0)
 
     li:nth-child(1)
-      background-color: $grey-0
+      background-color: $cool-grey-0
 
     li:nth-child(2)
-      background-color: $grey-1
+      background-color: $cool-grey-1
 
     li:nth-child(3)
-      background-color: $grey-2
+      background-color: $cool-grey-2
 
     li:nth-child(4)
-      background-color: $grey-3
+      background-color: $cool-grey-3
 
     li:nth-child(5)
-      background-color: $grey-4
+      background-color: $cool-grey-4
 
     li:nth-child(6)
-      background-color: $grey-5
+      background-color: $cool-grey-5
 
     li:nth-child(7)
-      background-color: $grey-6
+      background-color: $cool-grey-6
 
     li:nth-child(8)
-      background-color: $grey-7
+      background-color: $cool-grey-7
 
     li:nth-child(9)
-      background-color: $grey-8
+      background-color: $cool-grey-8
 
     li:nth-child(10)
-      background-color: $grey-9
+      background-color: $cool-grey-9
+
+  &.warm-greys
+    padding: 12px
+    background: linear-gradient(to right, $warm-grey-9, $warm-grey-0)
+
+    li:nth-child(1)
+      background-color: $warm-grey-0
+
+    li:nth-child(2)
+      background-color: $warm-grey-1
+
+    li:nth-child(3)
+      background-color: $warm-grey-2
+
+    li:nth-child(4)
+      background-color: $warm-grey-3
+
+    li:nth-child(5)
+      background-color: $warm-grey-4
+
+    li:nth-child(6)
+      background-color: $warm-grey-5
+
+    li:nth-child(7)
+      background-color: $warm-grey-6
+
+    li:nth-child(8)
+      background-color: $warm-grey-7
+
+    li:nth-child(9)
+      background-color: $warm-grey-8
+
+    li:nth-child(10)
+      background-color: $warm-grey-9
+
+  &.neutral-greys
+    padding: 12px
+    background: linear-gradient(to right, $neutral-grey-9, $neutral-grey-0)
+
+    li:nth-child(1)
+      background-color: $neutral-grey-0
+
+    li:nth-child(2)
+      background-color: $neutral-grey-1
+
+    li:nth-child(3)
+      background-color: $neutral-grey-2
+
+    li:nth-child(4)
+      background-color: $neutral-grey-3
+
+    li:nth-child(5)
+      background-color: $neutral-grey-4
+
+    li:nth-child(6)
+      background-color: $neutral-grey-5
+
+    li:nth-child(7)
+      background-color: $neutral-grey-6
+
+    li:nth-child(8)
+      background-color: $neutral-grey-7
+
+    li:nth-child(9)
+      background-color: $neutral-grey-8
+
+    li:nth-child(10)
+      background-color: $neutral-grey-9
 
   &.colors
     li
