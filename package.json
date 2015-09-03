@@ -4,7 +4,7 @@
   "dependencies": {},
   "devDependencies": {
     "matchdep": "~0.1.2",
-    "gulp": "~3.8.7",
+    "gulp": "~3.9.0",
     "gulp-util": "~2.2.14",
     "gulp-rename": "~1.0.0",
     "tiny-lr": "0.0.5",

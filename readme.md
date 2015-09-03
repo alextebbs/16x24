@@ -4,11 +4,14 @@ This is a front end setup built on the Gulp task runner. This setup can compile
 Sass, minify, lint, and concatenate JS, optimize images and svg files, compile HTML
 templates using Jade, refresh your browser automatically, and more. It's pretty cool.
 
+16x24 is mostly a CSS framework which tries to be as unopinionated as possible.
+If you don't want to use gulp: don't! Do what makes sense for your project.
+
 This repo contains a full configuration with all the features listed above. You'll
 probably want to examine `gulpfile.js` and adjust it according to your
 project requirements and directory structure.
 
-## Pre-setup
+## Dependencies and Setup
 
 This setup assumes you have the `npm`, `gem`, and `bower` package managers, the
 `sass` and `sass-globbing` gems installed globally, and the `gulp` package from NPM
@@ -36,7 +39,14 @@ After these steps are completed, they will not need to be done again on each
 new project. These tools will be globally installed on your machine for use on
 future projects.
 
-## Setup
+## Installation
+
+### Using the install script
+
+Just make ./install.sh executable, and run it. Your files will be built into
+the `_dev` directory.
+
+### Manual install
 
 * Clone this repository (`git clone https://github.com/alextebbs/16x24`)
     * Using SVN? This might still work? `svn checkout https://github.com/alextebbs/16x24`
@@ -49,17 +59,19 @@ future projects.
       and `bower.json` for a listing of the packages that will be installed.
 * Run Gulp (`gulp`)
     * Run a specific gulp task (`gulp styles` or `gulp scripts`)
-* If you didn't get errors, do a dance!
+* If you didn't get errors, do a dance! Your files have been built into the
+  `_dev` directory.
 
 ## More
 
 Running `gulp` tells gulp to run the default task. The default task does a few things:
 
 * A directory called `_dev` is created. This is the build destination.
-* The directory is wiped off all contents.
+* The directory is wiped of all contents.
 * The `styles`, `scripts`, `images`, `templates`, `fonts`, and `svg` tasks
   are run. Each task does it's work asynchronously, and the files are built
-  into the `_dev` directory. This directory is ignored via version control.
+  into the `_dev` directory. This directory is ignored via version control by
+  default.
 
 Running `gulp watch` tells gulp to run the watch task, which does the
 following:
