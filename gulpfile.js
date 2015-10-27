@@ -45,11 +45,10 @@ var log = gutil.log,
 
 // Styles
 gulp.task('styles', function() {
-  return gulp.src(srcGlobs.style)
-    .pipe(sass({
+  return sass(srcGlobs.style, {
       style: 'expanded',
-      require: ['sass-globbing'],
-    }))
+      require: ['sass-globbing']
+    })
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
     .pipe(gulp.dest(devFolder+'/assets/css'))
     .pipe(rename({ suffix: '.min' }))
